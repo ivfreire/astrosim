@@ -6,8 +6,6 @@
 
 class Body {
 private:
-    float time;
-
 
 public:
     std::string title;
