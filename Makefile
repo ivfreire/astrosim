@@ -7,4 +7,4 @@ LIBS			=
 DEPENDENCIES	=
 
 all $(MAIN):
-	$(CPP) -Wall $(MAIN) $(FILES) -o $(OUTPUT) $(INCLUDES) $(LIBS) $(DEPENDENCIES)
+	$(CPP) -Wall -std=c++11 $(MAIN) $(FILES) -o $(OUTPUT) $(INCLUDES) $(LIBS) $(DEPENDENCIES)
