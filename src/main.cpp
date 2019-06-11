@@ -5,16 +5,13 @@
 
 int main(int argc, char* argv[]) {
     // Define global variables
-    float dtime = 0.016f;
     Sandbox* sandbox = new Sandbox();
 
     // Main loop
     bool running = true;
     while (running) {
-
-        sandbox->Update(dtime);
+        sandbox->Update();
         sandbox->Render();
-
     }
 
     // Destroys instances and free up memory space

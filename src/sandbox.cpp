@@ -2,11 +2,13 @@
 
 // Sandbox's constructor
 Sandbox::Sandbox() {
+    this->dtime = 3600.0f;
+
     this->universe = new Universe();
 }
 
 // Sandbox's updates method
-void Sandbox::Update(float dtime) {
+void Sandbox::Update() {
     this->universe->Update(dtime);
 }
 

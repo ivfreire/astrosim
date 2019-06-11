@@ -5,13 +5,14 @@
 
 class Sandbox {
 private:
+    float dtime;
 
 
 public:
     Universe* universe;
 
     Sandbox();
-    void Update(float dtime);
+    void Update();
     void Render();
     ~Sandbox();
 

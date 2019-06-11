@@ -25,9 +25,8 @@ struct Vector3 {
         return sqrt(pow(this->x, 2) + pow(this->y, 2) + pow(this->z, 2));
     }
     Vector3 unit() {
-        Vector3 unit = *this;
-        unit.scale(1/this->module());
-        return unit;
+        Vector3 unit; unit.set(this->x, this->y, this->z);
+        return unit.scale(1 / unit.module());
     }
 };
 struct Dynamics {
