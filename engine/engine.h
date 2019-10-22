@@ -10,23 +10,24 @@ struct Vector3 {
         this->z = z;
     }
     Vector3 add(Vector3 vector, float scale) {
-        this->x += vector.x * scale;
-        this->y += vector.y * scale;
-        this->z += vector.z * scale;
-        return *this;
+        Vector3 buffer;
+        buffer->x = this.x + vector.x * scale;
+        buffer->y = this.y + vector.y * scale;
+        buffer->z = this.z + vector.z * scale;
+        return buffer;;
     }
     Vector3 scale(float scale) {
-        this->x = this->x * scale;
-        this->y = this->y * scale;
-        this->z = this->z * scale;
-        return *this;
+        Vector3 buffer;
+        buffer->x = this->x * scale;
+        buffer->y = this->y * scale;
+        buffer->z = this->z * scale;
+        return buffer;
     }
     float module() {
         return sqrt(pow(this->x, 2) + pow(this->y, 2) + pow(this->z, 2));
     }
     Vector3 unit() {
-        Vector3 unit; unit.set(this->x, this->y, this->z);
-        return unit.scale(1 / unit.module());
+        return *this.scale(1 / this.module());
     }
 };
 struct Dynamics {

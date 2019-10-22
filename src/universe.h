@@ -16,8 +16,6 @@ private:
     void CheckInteraction(Body* body);
     Vector3 Gravity(Body* body, Body* object);
 
-    std::ofstream filelog, moonlog;
-
 public:
     struct Environment {
         float G = 6.67e-11f;

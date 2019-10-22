@@ -9,8 +9,8 @@ Body::Body(std::string title, float mass, float radius) {
 }
 
 void Body::Update(float dtime) {
-    this->dynamics.velocity.add(dynamics.acceleration, dtime);
-    this->dynamics.position.add(dynamics.velocity, dtime);
+    this->dynamics.velocity = this->dynamics.velocity.add(dynamics.acceleration, dtime);
+    this->dynamics.position = this->dynamics.position.add(dynamics.velocity, dtime);
 }
 
 void Body::Render() {

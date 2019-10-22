@@ -2,9 +2,6 @@
 
 // Universe's constructor
 Universe::Universe() {
-    filelog.open("sandbox.log");
-    moonlog.open("moon.log");
-
     bodies.push_back(new Body("Earth", 5.972e24f, 0.0f));
     bodies.push_back(new Body("Moon", 7.347e22f, 0.0f));
 
@@ -25,20 +22,7 @@ void Universe::Update(float dtime) {
 
 // Renders the universe
 void Universe::Render() {
-    std::string line;
 
-    line += std::to_string(lifetime / 86400); line += "\tEarth: ";
-    line += std::to_string(bodies[0]->dynamics.position.x); line += "\tMoon: ";
-    line += std::to_string(bodies[1]->dynamics.position.x);
-
-    std::string moons;
-    moons += std::to_string(lifetime / 86400); moons += "\t";
-    moons += std::to_string(bodies[1]->dynamics.position.x); moons += "\n";
-
-    moonlog << moons;
-    
-    std::cout << line << std::endl;
-    filelog << line << "\n";
 }
 
 // Checks out if the bodies in the universe are interecting via gravity
