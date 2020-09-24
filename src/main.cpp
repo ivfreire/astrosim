@@ -1,21 +1,13 @@
-#include <engine.h>
-
-#include "body.h"
+#include <iostream>
 #include "sandbox.h"
 
 int main(int argc, char* argv[]) {
-    // Define global variables
-    Sandbox* sandbox = new Sandbox();
+	Sandbox* sandbox;
+	
+	sandbox = new Sandbox();
 
-    // Main loop
-    bool running = true;
-    while (running) {
-        sandbox->Update();
-        sandbox->Render();
-    }
+	sandbox->Update();
 
-    // Destroys instances and free up memory space
-    sandbox->~Sandbox();
-
-    return 0;
+	sandbox->~Sandbox();
+	return 0;
 }

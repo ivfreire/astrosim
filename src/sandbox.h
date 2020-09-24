@@ -1,19 +1,18 @@
 #pragma once
-#include <engine.h>
 
+#include <engine.h>
 #include "universe.h"
 
 class Sandbox {
 private:
-    float dtime;
 
 
 public:
-    Universe* universe;
+	Sandbox();
 
-    Sandbox();
-    void Update();
-    void Render();
-    ~Sandbox();
+	void Start();
+	void Update();
+
+	~Sandbox();
 
 };
