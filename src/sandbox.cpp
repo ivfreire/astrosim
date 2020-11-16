@@ -9,8 +9,8 @@ void Sandbox::Start() {
 	this->universe->Start();
 }
 
-void Sandbox::Update() {
-	this->universe->Update();	
+void Sandbox::Update(float dtime) {
+	this->universe->Update(dtime);	
 }
 
 

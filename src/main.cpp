@@ -7,7 +7,9 @@ int main(int argc, char* argv[]) {
 	sandbox = new Sandbox();
 	
 	sandbox->Start();
-	sandbox->Update();
+
+	bool running = true;
+	while (running) sandbox->Update(0.016f);
 
 	sandbox->~Sandbox();
 	return 0;

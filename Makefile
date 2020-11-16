@@ -1,6 +1,6 @@
 CPP				= g++
 MAIN			= src/main.cpp
-FILES			= src/sandbox.cpp src/universe.cpp
+FILES			= src/sandbox.cpp src/universe.cpp src/body.cpp
 OUTPUT			= build/astrosim
 INCLUDES		= -I"engine/"
 LIBS			=

@@ -11,6 +11,7 @@ enum class UniverseModel {
 
 struct Vector3 {
 	double x, y, z;
+
 	void set(double x, double y, double z) { this->x = x; this->y = y; this->z = z; }
 	double length() { return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2)) ; }
 	double dot(Vector3 vec) { return this->x * vec.x + this->y * vec.y + this->z * vec.z; }
@@ -21,8 +22,14 @@ struct Vector3 {
 
 struct Dynamics3 {
 	Vector3 position, velocity, acceleration;
-	void update(float dtime) {
+	float mass;
+
+	void Update(float dtime) {
 		this->velocity.add(this->acceleration, dtime);
 		this->position.add(this->velocity, dtime);
+	}
+
+	void Log() {
+		std::cout << this->position.x << ' ' << this->position.y << ' ' << this->position.z << std::endl;
 	}
 };

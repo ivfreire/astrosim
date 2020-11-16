@@ -14,7 +14,7 @@ public:
 	Sandbox();
 
 	void Start();
-	void Update();
+	void Update(float dtime);
 
 	~Sandbox();
 
