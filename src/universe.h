@@ -9,6 +9,9 @@ private:
 public:
 	Universe();
 
+	void Start();
+	void Update();
+
 	~Universe();
 
 };

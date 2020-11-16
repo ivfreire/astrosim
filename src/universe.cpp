@@ -4,6 +4,16 @@ Universe::Universe() {
 
 }
 
-Universe::~Universe() {
+
+void Universe::Start() {
+
+}
+
+void Universe::Update() {
 	
+}
+
+
+Universe::~Universe() {
+
 }

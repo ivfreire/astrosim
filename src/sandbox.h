@@ -8,6 +8,9 @@ private:
 
 
 public:
+	Universe* universe;
+
+
 	Sandbox();
 
 	void Start();
